@@ -43,8 +43,8 @@
             this.btn_clear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_in1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_in1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +89,7 @@
             this.lv_Calc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lv_Calc.BackColor = System.Drawing.Color.LightGray;
+            this.lv_Calc.BackColor = System.Drawing.Color.RosyBrown;
             this.lv_Calc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -132,6 +132,8 @@
             this.txt_inp3.Name = "txt_inp3";
             this.txt_inp3.Size = new System.Drawing.Size(298, 29);
             this.txt_inp3.TabIndex = 9;
+            this.txt_inp3.TextChanged += new System.EventHandler(this.txt_inp3_TextChanged);
+            this.txt_inp3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_inp3_KeyPress);
             // 
             // txt_Error
             // 
@@ -154,6 +156,7 @@
             this.btn_exit.TabIndex = 7;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_clear
             // 
@@ -164,6 +167,7 @@
             this.btn_clear.TabIndex = 4;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // label4
             // 
@@ -185,18 +189,9 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Hours Worked";
             // 
-            // txt_in1
-            // 
-            this.txt_in1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_in1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_in1.Location = new System.Drawing.Point(137, 17);
-            this.txt_in1.Name = "txt_in1";
-            this.txt_in1.Size = new System.Drawing.Size(298, 31);
-            this.txt_in1.TabIndex = 0;
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.BackColor = System.Drawing.Color.RosyBrown;
             this.panel2.Controls.Add(this.txt_inp3);
             this.panel2.Controls.Add(this.txt_Error);
             this.panel2.Controls.Add(this.btn_exit);
@@ -209,15 +204,30 @@
             this.panel2.Size = new System.Drawing.Size(556, 193);
             this.panel2.TabIndex = 2;
             // 
+            // txt_in1
+            // 
+            this.txt_in1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_in1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_in1.Location = new System.Drawing.Point(137, 17);
+            this.txt_in1.Name = "txt_in1";
+            this.txt_in1.Size = new System.Drawing.Size(298, 31);
+            this.txt_in1.TabIndex = 0;
+            this.txt_in1.TextChanged += new System.EventHandler(this.txt_in1_TextChanged);
+            this.txt_in1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_in1_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(583, 444);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Salary Caclulator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -243,8 +253,8 @@
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_in1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txt_in1;
     }
 }
 
