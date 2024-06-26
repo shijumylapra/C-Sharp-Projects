@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//Code written by SHIJU ABRAHAM - 25TH JUNE 2024
 
 namespace Salary_Calculator
 {
@@ -58,15 +58,9 @@ namespace Salary_Calculator
             }
         }
 
-        private void txt_in1_TextChanged(object sender, EventArgs e)
-        {
+ 
 
-        }
-
-        private void txt_inp3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void txt_inp3_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -108,6 +102,11 @@ namespace Salary_Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
             txt_Error.Visible = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

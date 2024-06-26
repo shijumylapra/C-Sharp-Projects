@@ -1,5 +1,5 @@
 ﻿namespace Salary_Calculator
-{
+{//Code written by SHIJU ABRAHAM - 25TH JUNE 2024
     partial class Form1
     {
         /// <summary>
@@ -132,7 +132,6 @@
             this.txt_inp3.Name = "txt_inp3";
             this.txt_inp3.Size = new System.Drawing.Size(298, 29);
             this.txt_inp3.TabIndex = 9;
-            this.txt_inp3.TextChanged += new System.EventHandler(this.txt_inp3_TextChanged);
             this.txt_inp3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_inp3_KeyPress);
             // 
             // txt_Error
@@ -203,6 +202,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(556, 193);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txt_in1
             // 
@@ -212,7 +212,6 @@
             this.txt_in1.Name = "txt_in1";
             this.txt_in1.Size = new System.Drawing.Size(298, 31);
             this.txt_in1.TabIndex = 0;
-            this.txt_in1.TextChanged += new System.EventHandler(this.txt_in1_TextChanged);
             this.txt_in1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_in1_KeyPress);
             // 
             // Form1
