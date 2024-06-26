@@ -62,5 +62,27 @@ namespace Tax_Calculator
         {
 
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txt_salary_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txt_salary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clear();
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_calc_Click(null, null);
+            }
+        }
     }
 }

@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.txt_examt);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MistyRose;
-            this.groupBox1.Location = new System.Drawing.Point(232, -10);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(337, 453);
             this.groupBox1.TabIndex = 27;
@@ -101,6 +101,8 @@
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(298, 31);
             this.txt_salary.TabIndex = 10;
+            this.txt_salary.TextChanged += new System.EventHandler(this.txt_salary_TextChanged);
+            this.txt_salary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_salary_KeyPress);
             // 
             // txt_net
             // 
@@ -162,6 +164,7 @@
             this.btn_exit.TabIndex = 14;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // label2
             // 
@@ -215,7 +218,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(232, 446);
+            this.label7.Location = new System.Drawing.Point(12, 468);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 14);
             this.label7.TabIndex = 28;
@@ -225,11 +228,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Chocolate;
+            this.ClientSize = new System.Drawing.Size(361, 485);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Tax_Calculator";
-            this.Text = "Tax_Calculator";
+            this.Text = "Tax Calculator";
             this.Load += new System.EventHandler(this.Tax_Calculator_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
